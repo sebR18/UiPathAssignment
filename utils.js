@@ -1,6 +1,6 @@
 
 function runAutomation(automationName, arguments) {
-      const robot = UiPathRobot.init(10);
+      const robot = UiPathRobot.init();
 
       robot.getProcesses()
       .then((processes) => {
