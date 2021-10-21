@@ -1,0 +1,172 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.recipientEmail="12sebastian@gmail.com" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="recipientEmail" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>576,1610.66666666667</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.Mail.Activities.Utils</x:String>
+      <x:String>UiPath.Mail.Activities.Business.HtmlEditor</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="552,1546" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Seahawks Schedule | Seattle Seahawks – Seahawks.com" sap:VirtualizedContainerService.HintSize="510,511.333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="47f66b31-a656-41b1-932e-10a38d99faf8" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,253.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Date &amp;amp; Time'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Opponent'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='section' idx='4' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='section' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='section' idx='4' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='section' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='p' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='text'&gt;&lt;webctrl tag='section' idx='4' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='section' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='p' idx='2' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,158.666666666667" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="Rows" MaximumResults="18" ScopeIdentifier="47f66b31-a656-41b1-932e-10a38d99faf8" Version="V1">
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.seahawks.com/schedule/" DesignTimeRectangle="11, -2528, 1895, 9229" FriendlyName="'Seattle Seahawks'" FullSelectorArgument="&lt;webctrl tag='MAIN' /&gt;" Guid="0538d6b9-3970-49b1-856f-f12bad62b9a6" InformativeScreenshot="298036e1a8c1d22785d63d4db0803c27.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Seahawks Schedule | Seattle Seahawks – Seahawks.com' /&gt;" SearchSteps="Selector" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-11, -11, 1942, 1102" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="5d52b0f5b2914a6cf96db6efda7e173f.png" Selector="&lt;html app='chrome.exe' title='Seahawks Schedule | Seattle Seahawks – Seahawks.com'/&gt;" Url="https://www.seahawks.com/schedule/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ui:WriteCsvFile Encoding="{x:Null}" AddHeaders="True" DataTable="[ExtractDataTable]" Delimitator="Comma" DisplayName="Write CSV" FilePath="Seahawks_Schedule.csv" sap:VirtualizedContainerService.HintSize="510,156.666666666667" sap2010:WorkflowViewState.IdRef="WriteCsvFile_1" />
+    <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="12sebastian@gmail.com" DisplayName="Use Gmail" EmailAddress="12sebastian@gmail.com" sap:VirtualizedContainerService.HintSize="510,706" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_1" Timeout="90" UseConnectionService="False">
+      <umab:GmailApplicationCard.Body>
+        <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Gmail" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,519.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Default="Seahawks Schedule" Name="emailSubject" />
+              <Variable x:TypeArguments="x:String" Default="Please find attached the 2021 Seahawks schedule." Name="emailBody" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Gmail]" Body="[emailBody]" BodyType="Text" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,427.333333333333" sap2010:WorkflowViewState.IdRef="SendMailX_1" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="[emailSubject]" To="[recipientEmail]" UseDocumentAsBody="False">
+              <umab:SendMailX.Files>
+                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                  <InArgument x:TypeArguments="x:String">Seahawks_Schedule.csv</InArgument>
+                </scg:List>
+              </umab:SendMailX.Files>
+              <umab:SendMailX.HtmlBodyFromFile>
+                <umabh:HtmlContentArgument FilePath="{x:Null}">
+                  <umabh:HtmlContentArgument.RuntimeImages>
+                    <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                  </umabh:HtmlContentArgument.RuntimeImages>
+                  <umabh:HtmlContentArgument.ValueMappings>
+                    <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="0" />
+                  </umabh:HtmlContentArgument.ValueMappings>
+                </umabh:HtmlContentArgument>
+              </umab:SendMailX.HtmlBodyFromFile>
+            </umab:SendMailX>
+          </Sequence>
+        </ActivityAction>
+      </umab:GmailApplicationCard.Body>
+      <umab:GmailApplicationCard.ClientId>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </umab:GmailApplicationCard.ClientId>
+      <umab:GmailApplicationCard.ClientSecret>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </umab:GmailApplicationCard.ClientSecret>
+    </umab:GmailApplicationCard>
+  </Sequence>
+</Activity>
