@@ -5,4 +5,4 @@ The main file is 'index.html' and it uses UiPath JS SDK and 'utils.js' to activa
 
 The UiPath automation project files are in the UiPath folder.
 
-This is a small experimental assignment, there is no unit test coverage for this project. This can be added later if requested.
+This is a small experimental assignment and there is no unit test coverage for this project. This can be added later if requested.
